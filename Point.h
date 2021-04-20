@@ -8,6 +8,7 @@
 class Point {
 	public:
 		Point(int name, int total, ...);
+		Point(int name, int total, std::vector<int> next);
 		void addWeight(int name, int begin, int end, int value);
 		int getWeight(int name, int time) const;
 		std::map<int, std::vector<Weight>> getNode() const;

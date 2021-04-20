@@ -10,6 +10,15 @@ Point::Point(int name, int total, ...) : name(name) {
     bestWeight = 0;
 }
 
+Point::Point(int name, int total, std::vector<int> next) : name(name) {
+    
+    for (int i = 0; i < total; i++) {
+        node[next[i]];
+    }
+    prev = 0;
+    bestWeight = 0;
+}
+
 void Point::addWeight(int name, int begin, int end, int value) {
 	node[name].push_back(Weight(begin, end, value));
 }
